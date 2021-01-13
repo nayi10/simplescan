@@ -1,0 +1,65 @@
+ext {
+    var = '/home/kamil/Projects/android-key.jks'
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.objectbox'
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('/home/kamil/Projects/android-key.jks')
+            storePassword 'nayi52645'
+            keyAlias = 'key0'
+            keyPassword 'nayi5264510'
+        }
+
+        release {
+            storeFile file('/home/kamil/Projects/android-key.jks')
+            storePassword 'nayi52645'
+            keyAlias = 'key0'
+            keyPassword 'nayi5264510'
+        }
+    }
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+    defaultConfig {
+        applicationId "com.bandughana.simplescan"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 5
+        versionName "1.0.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.gms:play-services-vision:20.1.3'
+    implementation 'com.google.android.gms:play-services-ads:19.1.0'
+    implementation 'xyz.belvi.mobilevision:barcodescanner:2.0.3'
+    implementation 'com.android.billingclient:billing:3.0.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.cardview:cardview:1.0.0'
+}

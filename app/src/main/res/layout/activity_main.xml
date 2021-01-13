@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/full_screen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/barcode"
+                android:name="com.google.android.gms.samples.vision.barcodereader.BarcodeCapture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:gvb_code_format="all_format"
+                app:gvb_rect_colors="@array/rect_color" />
+
+            <ImageView
+                android:id="@+id/viewFinder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/rect"
+                android:contentDescription="@string/view_focus_finder" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/barcodeResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:background="#9E000000"
+            android:gravity="center_horizontal|center_vertical"
+            android:minHeight="200dp"
+            android:padding="12dp"
+            android:paddingBottom="50dp"
+            android:textColor="#FFFFFF"
+            android:textIsSelectable="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top_content_controls"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center_horizontal|top"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_settings_black_24dp"
+                android:maxWidth="45dp"
+                android:maxHeight="45dp"
+                android:minWidth="24dp"
+                android:minHeight="24dp" />
+
+            <Button
+                android:id="@+id/btnHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/ic_history_black_24dp"
+                android:drawablePadding="5dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/my_scans"
+                android:textColor="#FFFFFF"
+                app:drawableTint="@android:color/white" />
+
+            <LinearLayout
+                android:id="@+id/mLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/flashToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/flashStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/flash_on"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/ic_more_vert_black_24dp"
+                    android:maxHeight="45dp"
+                    android:minWidth="24dp"
+                    android:minHeight="24dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:adSize="BANNER"
+            app:adUnitId="@string/home_ad_unit_id" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fullscreen_content_controls"
+        style="?metaButtonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:ignore="UselessParent">
+
+        <Button
+            android:id="@+id/btnOpenUrl"
+            style="?metaButtonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#222DFF"
+            android:text="@string/open"
+            android:textColor="#FFFFFF"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnCopy"
+            style="?metaButtonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF5722"
+            android:text="@android:string/copy"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnShare"
+            style="?metaButtonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#009688"
+            android:text="@string/share"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            style="?metaButtonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF093C"
+            android:text="@android:string/search_go"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</FrameLayout>

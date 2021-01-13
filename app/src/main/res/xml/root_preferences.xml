@@ -1,0 +1,93 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:key="scanner"
+        app:title="Scanner"
+        app:allowDividerBelow="true">
+
+        <SwitchPreference
+            app:key="disable_view_finder"
+            app:title="Disable the View Finder"
+            android:summaryOn="The View Finder will not be shown and codes will be automatically detected"
+            android:summaryOff="The View Finder will be shown. You need to focus camera on codes before they'll be detected"
+            app:defaultValue="false"/>
+
+
+        <SwitchPreference
+            app:key="multiple_scan"
+            app:title="Enable multi-scan mode"
+            app:defaultValue="false"
+            app:allowDividerBelow="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="scan_results"
+        app:title="Search &amp; links"
+        app:allowDividerAbove="true">
+
+        <CheckBoxPreference
+            app:key="auto_open_links"
+            app:title="Automatically open links"
+            app:summary="@string/summary_open_links"
+            app:defaultValue="false"/>
+
+        <SwitchPreference
+            app:key="force_search_urls"
+            app:title="Force search urls"
+            app:summary="Opens scanned results on Google search even if they are website links"
+            app:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <CheckBoxPreference
+        app:key="store_scans"
+        app:title="Store my scans"
+        app:defaultValue="false"
+        app:summaryOff="Your scans are currently not being stored"
+        app:summaryOn="Your scans are currently stored"
+        app:allowDividerAbove="true"/>
+
+    <PreferenceCategory
+        app:key="app_misc"
+        app:title="Miscellaneous">
+
+        <Preference
+            android:selectable="false"
+            app:title="@string/about"
+            android:summary="@string/summary_about" />
+
+        <Preference
+            android:selectable="false"
+            android:summary="@string/app_version"
+            android:title="@string/title_version" />
+
+        <Preference
+            app:key="feedback"
+            app:title="Send feedback"
+            app:summary="Report technical issues or suggest new features"/>
+
+        <!-- preference opens url in browser -->
+<!--        <Preference-->
+<!--            android:summary="@string/summary_faq"-->
+<!--            android:title="@string/title_faq">-->
+<!--            <intent-->
+<!--                android:action="android.intent.action.VIEW"-->
+<!--                android:data="@string/url_faq" />-->
+<!--        </Preference>-->
+
+        <Preference android:title="@string/privacy_policy">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_privacy" />
+        </Preference>
+
+        <Preference android:title="@string/title_terms">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/url_terms" />
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_upgrade"
+        android:title="@string/remove_ads" />
+    <item
+        android:id="@+id/action_share"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="@string/share" />
+    <item
+        android:id="@+id/action_rate_us"
+        android:title="@string/rate_us" />
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/about" />
+</menu>

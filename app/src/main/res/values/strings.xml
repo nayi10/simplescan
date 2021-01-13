@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Simple Scan</string>
+
+    <string name="open">Open</string>
+    <string name="flash_off">Flash off</string>
+    <string name="choose_email_client">Choose email client</string>
+    <string name="title_version">App version</string>
+    <string name="view_focus_finder">View focus finder</string>
+    <string name="visit">Visit</string>
+    <string name="app_title_pro">Simple Scan Pro</string>
+    <string name="flash_on">Flash on</string>
+    <string name="my_scans">My Scans</string>
+    <string name="title_activity_settings">Preferences</string>
+    <string name="about">About</string>
+    <string name="summary_about">Simple Scan is a free Android QR Code/Barcode scanner app created by a team of professional Android App developers for the everyday user.</string>
+    <string name="app_version">1.0.2</string>
+    <string name="delete_button">Delete button</string>
+    <string name="summary_open_links">Opens your scanned links automatically without tapping a button</string>
+    <string name="search">Search</string>
+    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <string name="share">Share</string>
+    <string name="home_ad_unit_id">ca-app-pub-6969650176436940/2992584251</string>
+    <string name="history_ad_unit_id">ca-app-pub-6969650176436940/6575578375</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-6969650176436940/2925135640</string>
+    <string name="rate_us">Rate us</string>
+    <string name="proudly_created_by_bandughana">Proudly created with ♥  by Bandughana</string>
+    <string name="version">Version</string>
+    <string name="app_icon">App icon</string>
+    <string name="remove_ads">Remove Ads</string>
+    <string name="remove_annoying_ads">Remove Annoying Ads</string>
+    <string name="if_you_don_t_like_to_see_ads_in_the_app_upgrade_your_account_to_remove_ads_and_help_us_maintain_and_add_more_features_thank_you">If you don\'t like to see ads in the app, upgrade your account to remove ads and help us maintain and add more features. Thank you</string>
+    <string name="purchase_success_msg">Thanks for the purchase.</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="url_privacy">https://bandughana.com/privacy</string>
+    <string name="title_terms"><![CDATA[Terms of Service & Use]]></string>
+    <string name="url_terms">https://www.bandughana.com/terms</string>
+</resources>
